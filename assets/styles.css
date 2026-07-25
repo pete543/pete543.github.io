@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap");
+
 :root {
   --navy-950: #071622;
   --navy-900: #0b2132;
@@ -18,6 +20,518 @@
   --radius-lg: 1.5rem;
   --radius-md: 1rem;
   --content: 74rem;
+}
+
+/* 2026 editorial redesign: direct, typographic, and intentionally image-free. */
+:root {
+  --navy-950: #101820;
+  --navy-900: #101820;
+  --navy-800: #18324a;
+  --teal-700: #1555d6;
+  --teal-600: #1555d6;
+  --teal-100: #eaf0ff;
+  --gold-500: #ff4d2e;
+  --gold-100: #fff0ec;
+  --ink: #101820;
+  --muted: #52606d;
+  --paper: #ffffff;
+  --white: #ffffff;
+  --line: #cbd3dc;
+  --success: #13724f;
+  --danger: #b42318;
+  --shadow: none;
+  --radius-lg: 0;
+  --radius-md: 0;
+  --content: 78rem;
+}
+
+body {
+  background: #fff;
+  font-family: "Archivo", "Arial Narrow", Arial, sans-serif;
+  line-height: 1.55;
+}
+
+a {
+  color: #1555d6;
+}
+
+:focus-visible {
+  outline-color: #ff4d2e;
+}
+
+.site-header {
+  border-bottom: 2px solid #101820;
+  background: #fff;
+  backdrop-filter: none;
+}
+
+.header-inner {
+  min-height: 4.5rem;
+}
+
+.brand,
+.brand:hover {
+  color: #101820;
+}
+
+.brand-mark {
+  width: 2.65rem;
+  height: 2.65rem;
+  color: #fff;
+  background: #1555d6;
+  border-radius: 0;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.brand-copy strong {
+  font-family: "Archivo", sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.brand-copy small {
+  color: #52606d;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.62rem;
+}
+
+.nav-toggle {
+  color: #101820;
+  border-color: #101820;
+  border-radius: 0;
+}
+
+.site-nav a {
+  color: #243442;
+  border-radius: 0;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+  color: #1555d6;
+  background: transparent;
+  box-shadow: inset 0 -3px #1555d6;
+}
+
+.site-nav .nav-portal,
+.site-nav .nav-portal:hover,
+.site-nav .nav-portal[aria-current="page"] {
+  color: #fff;
+  background: #101820;
+  box-shadow: none;
+}
+
+.hero {
+  color: #101820;
+  background: #fff;
+  border-bottom: 1px solid #101820;
+}
+
+.hero::after,
+.page-hero::after,
+.feature-panel::after {
+  display: none;
+}
+
+.hero-grid {
+  min-height: 35rem;
+  grid-template-columns: minmax(0, 1.3fr) minmax(18rem, 0.7fr);
+  gap: 5rem;
+  padding-block: 6.5rem;
+}
+
+.eyebrow,
+.hero .eyebrow,
+.page-hero .eyebrow {
+  color: #1555d6;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+}
+
+.eyebrow::before {
+  width: 1rem;
+  height: 3px;
+  background: #ff4d2e;
+}
+
+h1,
+h2,
+h3 {
+  color: #101820;
+  font-family: "Archivo", sans-serif;
+  font-weight: 700;
+  line-height: 1.02;
+}
+
+h1 {
+  max-width: 15ch;
+  font-size: clamp(3.2rem, 7.5vw, 6.8rem);
+  font-weight: 800;
+  letter-spacing: -0.065em;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  letter-spacing: -0.045em;
+}
+
+h3 {
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.hero h1,
+.page-hero h1 {
+  color: #101820;
+}
+
+.hero-lead {
+  max-width: 39rem;
+  color: #344553;
+  font-size: clamp(1.05rem, 2vw, 1.22rem);
+}
+
+.button {
+  color: #fff;
+  background: #1555d6;
+  border-color: #1555d6;
+  border-radius: 0;
+  font-weight: 700;
+}
+
+.button:hover {
+  color: #fff;
+  background: #0f3fa6;
+  border-color: #0f3fa6;
+}
+
+.button.secondary {
+  color: #101820;
+  border-color: #101820;
+}
+
+.button.secondary:hover {
+  color: #fff;
+  background: #101820;
+}
+
+.button.dark,
+.button.dark:hover {
+  color: #fff;
+  background: #101820;
+  border-color: #101820;
+}
+
+.hero-brief {
+  align-self: stretch;
+  padding: 1.5rem;
+  background: #101820;
+  border-top: 8px solid #ff4d2e;
+  color: #fff;
+}
+
+.hero-brief .brief-label {
+  display: block;
+  margin-bottom: 3rem;
+  color: #93adff;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-brief dl {
+  margin: 0;
+}
+
+.hero-brief div {
+  padding: 0.9rem 0;
+  border-top: 1px solid #52606d;
+}
+
+.hero-brief dt {
+  color: #9eabb5;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+}
+
+.hero-brief dd {
+  margin: 0.2rem 0 0;
+  font-weight: 700;
+}
+
+.trust-bar {
+  color: #101820;
+  background: #f1f4f7;
+  border-bottom: 1px solid #101820;
+}
+
+.trust-item {
+  border-color: #101820;
+}
+
+.trust-item:last-child {
+  border-right-color: #101820;
+}
+
+.trust-item strong {
+  font-family: "Archivo", sans-serif;
+  font-weight: 800;
+}
+
+.trust-item span {
+  color: #52606d;
+}
+
+.section {
+  padding-block: 5.5rem;
+}
+
+.section.tint {
+  background: #f1f4f7;
+  border-block: 1px solid #cbd3dc;
+}
+
+.section.dark {
+  color: #dfe6ec;
+  background: #101820;
+}
+
+.section.dark .eyebrow {
+  color: #93adff;
+}
+
+.section-heading {
+  max-width: 55rem;
+}
+
+.card {
+  padding: 1.5rem;
+  border: 1px solid #101820;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.card-link {
+  min-height: 18rem;
+  transition: background 120ms ease, color 120ms ease;
+}
+
+.card-link:hover {
+  color: #fff;
+  background: #1555d6;
+  border-color: #1555d6;
+  box-shadow: none;
+  transform: none;
+}
+
+.card-link:hover h3,
+.card-link:hover .card-number,
+.card-link:hover .card-arrow {
+  color: #fff;
+}
+
+.card-number {
+  color: #1555d6;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.68rem;
+}
+
+.feature-panel {
+  padding: 2rem;
+  color: #fff;
+  background: #1555d6;
+  border-radius: 0;
+  border-top: 8px solid #ff4d2e;
+  box-shadow: none;
+}
+
+.feature-panel p {
+  color: #e7ecff;
+}
+
+.feature-panel .metric {
+  border-color: rgba(255,255,255,.45);
+}
+
+.feature-panel .metric strong,
+.feature-panel .metric span {
+  color: #fff;
+  font-family: "Archivo", sans-serif;
+}
+
+.check-list li::before {
+  width: auto;
+  height: auto;
+  top: 0.73rem;
+  color: #1555d6;
+  background: transparent;
+  border-radius: 0;
+  content: "—";
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.quote {
+  border-left-color: #ff4d2e;
+  color: #101820;
+  font-family: "Archivo", sans-serif;
+  font-size: clamp(1.35rem, 3vw, 2.05rem);
+  font-weight: 600;
+}
+
+.page-hero {
+  min-height: 23rem;
+  color: #101820;
+  background: #f1f4f7;
+  border-bottom: 1px solid #101820;
+}
+
+.page-hero .container {
+  padding-block: 4.5rem;
+}
+
+.page-hero h1 {
+  max-width: 18ch;
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+}
+
+.page-hero p,
+.breadcrumb {
+  color: #52606d;
+}
+
+.breadcrumb a {
+  color: #1555d6;
+}
+
+.timeline {
+  border-left: 1px solid #101820;
+}
+
+.timeline-step {
+  border-top-color: #101820;
+}
+
+.timeline-step::before {
+  color: #101820;
+  background: #fff;
+  border: 1px solid #101820;
+  border-radius: 0;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.metric strong {
+  font-family: "Archivo", sans-serif;
+}
+
+.service-band {
+  background: #eaf0ff;
+  border: 1px solid #1555d6;
+  border-radius: 0;
+}
+
+.tag {
+  color: #101820;
+  background: #eaf0ff;
+  border: 1px solid #8faeff;
+  border-radius: 0;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.68rem;
+}
+
+.portal-shell,
+.client-card,
+.field,
+.success-message,
+.contact-card {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.portal-header,
+.contact-card {
+  background: #101820;
+}
+
+.portal-header strong {
+  font-family: "Archivo", sans-serif;
+}
+
+.demo-notice {
+  color: #101820;
+  background: #fff0ec;
+  border-color: #ffb3a4;
+}
+
+.portal-entry .portal-seal {
+  background: #1555d6;
+  border-radius: 0;
+}
+
+.portal-tools {
+  background: #f1f4f7;
+}
+
+.field:focus {
+  border-color: #1555d6;
+  box-shadow: 0 0 0 3px #eaf0ff;
+}
+
+.status {
+  border-radius: 0;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.site-footer {
+  color: #cbd3dc;
+  background: #101820;
+  border-top: 8px solid #1555d6;
+}
+
+[data-reveal] {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+@media (max-width: 68rem) {
+  .site-nav {
+    background: #fff;
+    border-top-color: #101820;
+    box-shadow: none;
+  }
+
+  .site-nav .nav-portal {
+    color: #fff;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .hero-brief {
+    max-width: 35rem;
+  }
+}
+
+@media (max-width: 48rem) {
+  .hero-grid {
+    padding-block: 4rem;
+  }
+
+  h1 {
+    font-size: clamp(3rem, 15vw, 4.5rem);
+  }
+
+  .page-hero {
+    min-height: 20rem;
+  }
 }
 
 * {
