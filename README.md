@@ -1,47 +1,30 @@
-# One-Punch Anime Emporium
+# Project Consultants Plus and One-Punch Anime Emporium
 
-Static storefront website for One-Punch Anime Emporium.
+This GitHub Pages repository contains two separate static course-project sites.
 
 ## GitHub Pages
 
-This repository can publish directly from the `main` branch root at:
+The `main` branch publishes:
 
-```text
-https://pete543.github.io/
-```
-
-## Cloudflare Pages
-
-- Build command: leave blank
-- Build output directory: `/`
-- Framework preset: None / static site
+- Project Consultants Plus: `https://pete543.github.io/`
+- One-Punch Anime Emporium: `https://pete543.github.io/one-punch/`
 
 ## Local Preview
 
-Open `index.html` directly, or run a simple static server:
+Run a static server from the repository root:
 
-```powershell
-python -m http.server 8788
+```text
+npm start
 ```
 
-Then visit `http://localhost:8788`.
+Then open the local root for PCP or `/one-punch/` for the storefront.
 
-## Pages Included
+## Validation
 
-- Home
-- Account
-- About
-- Catalog
-- Figures
-- Manga
-- Comics
-- New Arrivals
-- Special Orders
-- Order
-- Locations
-- Contact
-- Resources
-- Gallery
-- Customer Testimonials
-- Shipping Policy
-- Return Policy
+```text
+npm run check
+```
+
+The checker validates both sites independently, including page counts, local
+links, referenced assets, unique IDs, form labels, metadata, and brand
+separation.

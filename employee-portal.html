@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Employee Portal Demo | Project Consultants Plus</title>
+  <meta name="description" content="Academic demonstration of the PCP employee client and contact lookup workspace using fictional data.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Project Consultants Plus">
+  <meta property="og:title" content="Employee Portal Demo | PCP">
+  <meta property="og:description" content="A fictional client and contact lookup demonstration.">
+  <meta property="og:image" content="https://pete543.github.io/assets/pcp-social.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/site.js" defer></script>
+</head>
+<body data-page="portal">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header"><div class="header-inner"><a class="brand" href="index.html" aria-label="Project Consultants Plus home"><span class="brand-mark" aria-hidden="true">PCP</span><span class="brand-copy"><strong>Project Consultants Plus</strong><small>Practical leadership. Real-world results.</small></span></a><button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav"><span class="nav-toggle-lines" aria-hidden="true"></span>Menu</button><nav class="site-nav" id="primary-nav" data-nav aria-label="Primary navigation"><ul><li><a href="index.html" data-page-link="home">Home</a></li><li><a href="about.html" data-page-link="about">About</a></li><li><a href="services.html" data-page-link="services">Services</a></li><li><a href="approach.html" data-page-link="approach">Approach</a></li><li><a href="global-reach.html" data-page-link="global">Global Reach</a></li><li><a href="contact.html" data-page-link="contact">Contact</a></li><li><a class="nav-portal" href="employee-portal.html" data-page-link="portal">Employee Portal</a></li></ul></nav></div></header>
+  <main id="main-content">
+    <section class="page-hero"><div class="container"><div class="breadcrumb"><a href="index.html">Home</a> / Employee Portal</div><span class="eyebrow">Employee Portal</span><h1>Project context, ready when the team needs it.</h1><p>A functional academic demonstration of how PCP employees could look up centralized client and contact information.</p></div></section>
+    <section class="section"><div class="container">
+      <div class="portal-shell" data-reveal>
+        <div class="portal-header"><strong>PCP Client Workspace</strong><button class="button secondary" type="button" data-portal-logout>Exit demo</button></div>
+        <p class="demo-notice"><strong>Academic prototype:</strong> every organization, person, email address, engagement, and milestone below is fictional. This page is not a secure production system.</p>
+        <div class="portal-entry" data-portal-entry>
+          <span class="portal-seal" aria-hidden="true">PCP</span>
+          <h2>Employee workspace demonstration</h2>
+          <p>This demonstration uses browser-session state only. It does not authenticate a real employee, store personal information, or connect to a company system.</p>
+          <button class="button dark" type="button" data-portal-open>Enter fictional client directory</button>
+        </div>
+        <div data-portal-workspace hidden>
+          <div class="portal-tools">
+            <div class="form-group"><label for="client-search">Search fictional clients</label><input class="field" id="client-search" type="search" placeholder="Organization, contact, service, location…" data-client-search></div>
+            <div class="form-group"><label for="client-status">Filter by status</label><select class="field" id="client-status" data-client-filter><option>All</option><option>Active</option><option>Discovery</option><option>Closing</option></select></div>
+          </div>
+          <div class="client-list" data-client-list aria-live="polite"></div>
+        </div>
+      </div>
+    </div></section>
+    <section class="section tint"><div class="container split"><div data-reveal><span class="eyebrow">Production direction</span><h2>What a real portal would require.</h2><p class="lead">A deployed employee system would place verified identity, role-based permissions, encrypted data, audit logging, retention rules, and administrative ownership ahead of convenience.</p></div><div data-reveal><ul class="check-list"><li>Company-managed identity and multifactor authentication</li><li>Least-privilege access by employee role</li><li>Centralized, encrypted client records</li><li>Documented ownership and data quality controls</li><li>Security review before real information is migrated</li></ul></div></div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-grid"><div class="footer-brand"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">PCP</span><span class="brand-copy"><strong>Project Consultants Plus</strong><small>Las Vegas, Nevada</small></span></a><p>Practical project leadership for real-world IT business solutions.</p></div><div><span class="footer-title">Expertise</span><ul class="footer-links"><li><a href="sdlc.html">SDLC Management</a></li><li><a href="integration.html">System Integration</a></li><li><a href="usability.html">Usability &amp; Auditing</a></li></ul></div><div><span class="footer-title">Company</span><ul class="footer-links"><li><a href="about.html">About PCP</a></li><li><a href="approach.html">Our Approach</a></li><li><a href="global-reach.html">Global Reach</a></li></ul></div><div><span class="footer-title">Connect</span><ul class="footer-links"><li><a href="contact.html">Contact</a></li><li><a href="employee-portal.html">Employee Portal</a></li><li><a href="https://www.pmi.org/certifications/" target="_blank" rel="noopener noreferrer">PMI Certifications</a></li></ul></div></div><div class="container footer-bottom"><span>© <span data-year></span> Project Consultants Plus.</span><span>Academic website prototype · No real client data</span></div></footer>
+</body>
+</html>
