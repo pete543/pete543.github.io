@@ -36,26 +36,43 @@ a { color: #1555d6; }
 .brand, .brand:hover { color: #101820; }
 
 .brand-mark {
-  width: 2.65rem;
-  height: 2.65rem;
-  color: #fff;
-  background: #1555d6;
+  width: 3rem;
+  height: 2.7rem;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  color: #101820;
+  background: transparent;
+  border-left: 5px solid #1555d6;
   border-radius: 0;
   font-family: "IBM Plex Mono", monospace;
+  font-size: 0;
+  letter-spacing: -.08em;
+}
+
+.brand-mark::before {
+  content: "PC";
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.brand-mark::after {
+  margin-left: .08rem;
+  color: #ff4d2e;
+  content: "+";
+  font-size: 1.15rem;
+  font-weight: 700;
 }
 
 .brand-copy strong {
   font-family: "Archivo", sans-serif;
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 800;
   letter-spacing: -.02em;
 }
 
-.brand-copy small {
-  color: #52606d;
-  font-family: "IBM Plex Mono", monospace;
-  font-size: .62rem;
-}
+.site-header .brand-copy small { display: none; }
 
 .nav-toggle {
   color: #101820;
@@ -122,18 +139,19 @@ h1, h2, h3 {
   font-family: "Archivo", sans-serif;
   font-weight: 700;
   line-height: 1.02;
+  text-wrap: balance;
 }
 
 h1 {
   max-width: 15ch;
-  font-size: clamp(3.2rem, 7.5vw, 6.8rem);
+  font-size: clamp(3rem, 6.3vw, 5.6rem);
   font-weight: 800;
-  letter-spacing: -.065em;
+  letter-spacing: -.052em;
 }
 
 h2 {
   font-size: clamp(2rem, 4vw, 3.5rem);
-  letter-spacing: -.045em;
+  letter-spacing: -.035em;
 }
 
 h3 {
@@ -349,8 +367,16 @@ h3 {
 .page-hero .container { padding-block: 4.5rem; }
 
 .page-hero h1 {
-  max-width: 18ch;
-  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  max-width: 21ch;
+  margin-bottom: 1.15rem;
+  font-size: clamp(2.6rem, 5vw, 4.5rem);
+  letter-spacing: -.045em;
+  line-height: 1.04;
+}
+
+.page-hero p {
+  max-width: 48rem;
+  font-size: 1.08rem;
 }
 
 .page-hero p, .breadcrumb { color: #52606d; }
@@ -450,6 +476,7 @@ h3 {
 
 @media (max-width: 48rem) {
   .hero-grid { padding-block: 4rem; }
-  h1 { font-size: clamp(3rem, 15vw, 4.5rem); }
+  h1 { font-size: clamp(2.65rem, 12vw, 3.75rem); }
+  .page-hero h1 { font-size: clamp(2.35rem, 10.5vw, 3.25rem); }
   .page-hero { min-height: 20rem; }
 }
