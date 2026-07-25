@@ -47,6 +47,32 @@ for (const site of sites) {
     );
   }
 
+  const siteCorpus = htmlFiles
+    .map((file) => fs.readFileSync(path.join(site.directory, file), "utf8"))
+    .join("\n");
+
+  if (site.name === "PCP") {
+    const assignmentRequirements = [
+      ["February 2015", "founding date"],
+      ["Joanne Schmidt", "co-founder Joanne Schmidt"],
+      ["Alexis Green", "co-founder Alexis Green"],
+      ["20 consultants", "consultant count"],
+      ["2</strong><span>Office staff", "office-staff count"],
+      ["Project Management Institute", "PMI certification requirement"],
+      ["https://www.pmi.org/certifications/", "PMI certification link"],
+      ["100% service guarantee", "service guarantee"],
+      ["SDLC", "SDLC services"],
+      ["System Integration", "system-integration services"],
+      ["Usability Testing", "usability-testing services"],
+      ["Employee Portal", "employee lookup page"],
+      ["Bring practical Project Management principles to bear on real-world IT business solutions", "mission statement"],
+      ["<h2>Vision</h2>", "vision statement"]
+    ];
+    for (const [text, description] of assignmentRequirements) {
+      if (!siteCorpus.includes(text)) errors.push(`PCP: missing assignment requirement (${description})`);
+    }
+  }
+
   for (const file of htmlFiles) {
     const fullPath = path.join(site.directory, file);
     const html = fs.readFileSync(fullPath, "utf8");
@@ -60,6 +86,13 @@ for (const site of sites) {
     if (!/<h1(?:\s[^>]*)?>[\s\S]*?<\/h1>/i.test(html)) errors.push(`${label}: missing h1`);
     if (!html.includes(site.requiredText)) errors.push(`${label}: missing site brand`);
     if (html.includes(site.forbiddenText)) errors.push(`${label}: contains cross-site brand`);
+    if (site.name === "PCP") {
+      for (const heading of html.matchAll(/<h[1-3][^>]*>([^<]+)<\/h[1-3]>/gi)) {
+        if (heading[1].trim().endsWith(".")) {
+          errors.push(`${label}: heading ends with a period "${heading[1].trim()}"`);
+        }
+      }
+    }
 
     const ids = [...html.matchAll(/\sid="([^"]+)"/g)].map((match) => match[1]);
     const duplicateIds = ids.filter((id, index) => ids.indexOf(id) !== index);
